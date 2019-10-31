@@ -43,5 +43,5 @@ app.post('/api/petnames', (req, res) => {
 // PORT
 const port = process.env.PORT || 9000
 app.listen(port, () => console.log(`Listening on port ${port}...`))
-// Run `export PORT=9000` will set the port number can vary
+
 

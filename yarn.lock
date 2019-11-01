@@ -704,6 +704,13 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.3.tgz#4a12ff1b60376ef09862c2093edd908328be8423"
   integrity sha512-a30VEBm4PEdx1dRB7MFK7BejejvCvBronbLjht+sHuGYj8PHs7M/5Z+rt5lw551vZ7yfTCj4Vuyy3mSJytDWRQ==
 
+greetings@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/greetings/-/greetings-1.0.0.tgz#af2d8dd420d5171a5f8f59a3224c45b3ceead724"
+  integrity sha1-ry2N1CDVFxpfj1mjIkxFs87q1yQ=
+  dependencies:
+    unique-random-array "^1.0.0"
+
 has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
@@ -1891,6 +1898,18 @@ union-value@^1.0.0:
     get-value "^2.0.6"
     is-extendable "^0.1.1"
     set-value "^2.0.1"
+
+unique-random-array@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/unique-random-array/-/unique-random-array-1.0.1.tgz#f29bda2a62be8860a703c4739c8f4fdb4d722cc7"
+  integrity sha512-z9J/SV8CUIhIRROcHe9YUoAT6XthUJt0oUyLGgobiXJprDP9O9dsErNevvSaAv5BkhwFEVPn6nIEOKeNE6Ck1Q==
+  dependencies:
+    unique-random "^1.0.0"
+
+unique-random@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/unique-random/-/unique-random-1.0.0.tgz#ce3e224c8242cd33a0e77b0d7180d77e6b62d0c4"
+  integrity sha1-zj4iTIJCzTOg53sNcYDXfmti0MQ=
 
 unique-string@^1.0.0:
   version "1.0.0"

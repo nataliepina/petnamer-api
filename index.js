@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
+const greetings = require('greetings')
 
 app.use(express.json())
 app.use(cors())
@@ -14,6 +15,11 @@ const petnames = [
 // Defining routes
 app.get('/', (req, res) => {
   res.send('Hello World!!!')
+})
+
+// Route for greetings
+app.get('/api/greetings', (req,res) => {
+  res.send({greeting: greetings()})
 })
 
 app.get('/api/petnames', (req, res) => {

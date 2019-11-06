@@ -43,7 +43,7 @@ const updateName = (request, response) => {
   const { name } = request.body
 
   pool.query(
-    'UPDATE users SET name = $1 WHERE id = $2',
+    'UPDATE petnames SET name = $1 WHERE id = $2',
     [name, id],
     (error, results) => {
       if (error) {
@@ -57,11 +57,11 @@ const updateName = (request, response) => {
 const deleteName = (request, response) => {
   const id = parseInt(request.params.id)
 
-  pool.query('DELETE FROM users WHERE id = $1', [id], (error, results) => {
+  pool.query('DELETE FROM petnames WHERE id = $1', [id], (error, results) => {
     if (error) {
       throw error
     }
-    response.status(200).send(`User deleted with ID: ${id}`)
+    response.status(200).send(`Name deleted with ID: ${id}`)
   })
 }
 

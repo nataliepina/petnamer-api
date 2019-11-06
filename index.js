@@ -47,7 +47,7 @@ app.get('/api/greetings', (req,res) => {
 })
 
 // Route for local pet names
-app.get('/api/petnames', (req, res) => {
+app.get('/petnames', (req, res) => {
   res.send(petnames)
 })
 

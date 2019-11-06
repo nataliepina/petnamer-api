@@ -30,11 +30,11 @@ const getNameById = (request, response) => {
 const createName = (request, response) => {
   const { name } = request.body
 
-  pool.query('INSERT INTO petnames (name, email) VALUES ($1)', [name], (error, results) => {
+  pool.query('INSERT INTO petnames (name) VALUES ($1)', [name], (error, results) => {
     if (error) {
       throw error
     }
-    response.status(201).send(`Name added with ID: ${result.insertId}`)
+    response.status(201).send(`Name added with ID: ${results.insertId}`)
   })
 }
 

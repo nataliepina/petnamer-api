@@ -57,29 +57,3 @@ app.get('/api/words', (req, res) => {
   let otherRandomNum = randomizeOther(adjectives.length)
   res.send({name: `${adjectives[otherRandomNum]} ${nouns[randomNum ][0]} `})
 })
-
-// app.get('/api/petnames/:id', (req, res) => {
-//   const petname = petnames.find((n) => n.id === parseInt(req.params.id))
-//   if (!petname) res.status(404).send('Name Not Found')
-//   res.send(petname)
-// })
-
-// app.post('/api/petnames', (req, res) => {
-//   if (!req.body.name || req.body.name.length < 3) {
-//     // 400 Bad Request
-//     res.status(400).send('Minimum of 3 characters required')
-//     return
-//   }
-//   const petname = {
-//     id: petnames.length + 1,
-//     name: req.body.name,
-//   }
-//   petnames.push(petname)
-//   res.send(petname)
-// })
-
-// const petnames = [
-//     {id: 1, name: 'fluffy'},
-//     {id: 2, name: 'waffles'},
-//     {id: 3, name: 'snowball'},
-//   ]

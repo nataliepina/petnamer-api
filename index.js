@@ -6,6 +6,7 @@ const greetings = require('greetings')
 const nouns = require('fun-word-list/lists/nouns')
 const adjectives = require('fun-word-list/lists/adjectives')
 const db = require('./queries')
+const models = require('./models')
 
 app.use(express.json())
 app.use(cors())

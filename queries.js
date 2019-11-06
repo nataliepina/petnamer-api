@@ -1,11 +1,13 @@
 const Pool = require('pg').Pool
 const pool = new Pool({
-  user: 'me',
-  host: 'localhost',
-  database: 'petnames',
-  password: 'password',
+  user: 'vqllxvbqggyyfp',
+  host: 'ec2-174-129-227-128.compute-1.amazonaws.com',
+  database: 'd8gaff0deihau9',
+  password: '4afc771dc58775cf72cd9e079bb781a273e2c6e52c07d8abc2a4dc96c7afe29f',
   port: 5432,
+  ssl: true
 })
+// postgres://vqllxvbqggyyfp:4afc771dc58775cf72cd9e079bb781a273e2c6e52c07d8abc2a4dc96c7afe29f@ec2-174-129-227-128.compute-1.amazonaws.com:5432/d8gaff0deihau9
 
 const getNames = (request, response) => {
   pool.query('SELECT * FROM petnames ORDER BY id ASC', (error, results) => {

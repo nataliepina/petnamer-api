@@ -38,7 +38,7 @@ const randomizeOther = (max) => {
 
 // Test route
 app.get('/', (req, res) => {
-  res.json({ info: 'Node.js, Express, and Postgres API' })
+  res.send({ info: 'Node.js, Express, and Postgres API...' })
 })
 
 // Route for greetings

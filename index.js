@@ -7,7 +7,8 @@ const nouns = require('fun-word-list/lists/nouns')
 const adjectives = require('fun-word-list/lists/adjectives')
 const db = require('./queries')
 const models = require('./models')
-require('dotenv').config()
+
+const ENV = require('dotenv').config()
 
 app.use(express.json())
 app.use(cors())
@@ -19,7 +20,7 @@ app.use(
 )
 
 // PORT
-const port = process.env.PORT || 9000
+const port = process.env.PORT
 app.listen(port, () => console.log(`Listening on port ${port}...`))
 
 

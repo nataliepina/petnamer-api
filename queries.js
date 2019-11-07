@@ -24,11 +24,11 @@ const getNames = (request, response) => {
 
 const getNameById = (request, response) => {
   const id = request.params.id
-  Petname.find({
+  Petname.findAll({
     where: { id }
   })
-    .then(petname => {
-      response.json(petname)
+    .then(name => {
+      response.json(name)
     })
     .catch(err => {
       response.statusCode = 500

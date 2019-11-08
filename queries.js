@@ -1,5 +1,5 @@
 const { Petname } = require('./models')
-
+const { Sequelize, Model, DataTypes } = require('sequelize')
 // const Pool = require('pg').Pool
 // const pool = new Pool({
 //   user: 'vqllxvbqggyyfp',

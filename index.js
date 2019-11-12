@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
@@ -8,8 +10,6 @@ const adjectives = require('fun-word-list/lists/adjectives')
 const db = require('./queries')
 const models = require('./models')
 
-const ENV = require('dotenv').config()
-
 app.use(express.json())
 app.use(cors())
 app.use(bodyParser.json())
@@ -19,11 +19,6 @@ app.use(
   })
 )
 
-// app.use(function (req, res, next) {
-//   res.setHeader('Access-Control-Allow-Origin', '*');
-//   next();
-// });
-
 // PORT
 const port = process.env.PORT
 app.listen(port, () => console.log(`Listening on port ${port}...`))
@@ -32,8 +27,8 @@ app.listen(port, () => console.log(`Listening on port ${port}...`))
 app.get('/petnames', db.getNames)
 app.get('/petnames/:id', db.getNameById)
 app.post('/petnames', db.createName)
-app.put('/petnames/:id', db.updateName)
 app.delete('/petnames/:id', db.deleteName)
+app.post('/petnames/:id/vote', db.updateRating)
 
 // Randomize api data
 const randomize = (max) => {

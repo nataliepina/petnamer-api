@@ -9,7 +9,8 @@ Petname.init({
     unique: true
   },
   upvotes: {
-    type: Sequelize.INTEGER
+    type: Sequelize.INTEGER,
+    defaultValue: 0
   }
 }, { sequelize, modelName: 'petnames' })
 

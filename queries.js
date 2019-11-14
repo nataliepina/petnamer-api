@@ -2,7 +2,7 @@ const { Petname } = require('./models')
 const { Sequelize, Model, DataTypes } = require('sequelize')
 
 const getNames = (request, response) => {
-  Petname.findAll()
+  Petname.findAll({ limit: 10, order: [['upvotes', 'ASC']]})
   .then(petnames => {
     response.json(petnames)
   })
